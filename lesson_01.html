@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson Video Gallery</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f9; color: #333; }
+        header { background: #007bff; color: white; padding: 20px; display: flex; justify-content: space-between; align-items: center; }
+        header a { color: white; text-decoration: none; margin-left: 15px; }
+        .container { max-width: 1000px; margin: 30px auto; padding: 0 20px; }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden; display: flex; flex-direction: column; }
+        .video-container { position: relative; width: 100%; padding-bottom: 56.25%; /* 16:9 Aspect Ratio */ }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+        .card-content { padding: 15px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+        .card-content h3 { margin-top: 0; color: #007bff; }
+        .card-content p { font-size: 14px; color: #666; line-height: 1.4; }
+        .nav-links { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h2>Video Gallery</h2>
+        <div>
+            <a href="dashboard.php">Dashboard</a>
+            <a href="logout.php">Logout</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Video Lesson Gallery</h2>
+        <p class="nav-links">Browse through your available video lessons below.</p>
+
+        <!-- Gallery Grid -->
+        <div class="gallery">
+            
+            <!-- Lesson 1 -->
+            <div class="card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div>
+                        <h3>Introduction to PHP Basics</h3>
+                        <p>Learn how PHP syntax works, variables, and how to output text to the browser.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lesson 2 -->
+            <div class="card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div>
+                        <h3>Working with Forms</h3>
+                        <p>Learn how to capture user input securely using POST and GET methods in PHP.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lesson 3 -->
+            <div class="card">
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+                </div>
+                <div class="card-content">
+                    <div>
+                        <h3>Sessions and Security</h3>
+                        <p>Understand how to secure pages using PHP sessions and password hashing.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
