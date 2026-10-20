@@ -1180,3 +1180,603 @@ footer hr {
         flex-direction: column;
     }
 }
+
+
+/* =========================================================
+   ADDED RESPONSIVE DESIGN
+   Mobile • Tablet • Laptop • Desktop
+   Added below the original CSS; original rules preserved.
+   ========================================================= */
+
+/* Shared responsive media and layout safety */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+img,
+video {
+    height: auto;
+}
+
+.container,
+.container-fluid,
+.row,
+[class*="col-"] {
+    min-width: 0;
+}
+
+video,
+iframe {
+    display: block;
+}
+
+.video-wrapper {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
+    padding-bottom: 0;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.local-video {
+    width: 100%;
+    max-height: 500px;
+    object-fit: contain;
+}
+
+.lesson-image img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.login-box,
+.signup-box,
+.dictionary-box,
+.translation-card,
+.dashboard-card,
+.lesson-card,
+.culture-card,
+.feature-card,
+.audience-card,
+.upload-card {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+button,
+.btn,
+input,
+select,
+textarea {
+    max-width: 100%;
+}
+
+input,
+select,
+textarea {
+    min-width: 0;
+}
+
+/* Desktop: 1200px and wider */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+
+    .section-light,
+    .section-dark,
+    .example-section,
+    .situations-section {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .hero-section {
+        padding: 150px 0 100px;
+    }
+
+    .phone-preview {
+        width: 285px;
+    }
+
+    .video-modal .modal-dialog {
+        max-width: 900px;
+    }
+}
+
+/* Laptop: 992px–1199px */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .nav-tabs-custom {
+        gap: 2px;
+    }
+
+    .nav-tabs-custom .nav-link {
+        padding: 9px 10px;
+        font-size: 0.85rem;
+    }
+
+    .hero-section {
+        padding: 140px 0 90px;
+    }
+
+    .hero-section h1 {
+        font-size: clamp(2.8rem, 5vw, 4.8rem);
+    }
+
+    .phone-preview {
+        width: 270px;
+    }
+
+    .dashboard-card,
+    .culture-card,
+    .feature-card {
+        padding: 22px;
+    }
+
+    .audience-card {
+        padding: 35px;
+    }
+}
+
+/* Tablet: 768px–991px */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    html {
+        scroll-padding-top: 85px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .navbar-collapse {
+        max-height: calc(100vh - 80px);
+        overflow-y: auto;
+    }
+
+    .nav-tabs-custom {
+        align-items: stretch;
+        gap: 5px;
+        padding-top: 15px;
+    }
+
+    .nav-tabs-custom .nav-link {
+        padding: 12px 15px;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding: 125px 0 75px;
+    }
+
+    .hero-section h1 {
+        font-size: clamp(2.7rem, 6vw, 4rem);
+    }
+
+    .phone-preview {
+        width: min(270px, 100%);
+        min-height: 500px;
+    }
+
+    .section-light,
+    .section-dark,
+    .example-section,
+    .situations-section {
+        padding: 75px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .dashboard-card,
+    .culture-card,
+    .feature-card {
+        padding: 20px;
+    }
+
+    .lesson-content {
+        padding: 20px;
+    }
+
+    .translation-row {
+        gap: 18px;
+        padding: 22px;
+    }
+
+    .dictionary-box {
+        padding: 25px;
+    }
+
+    .audience-card {
+        padding: 30px;
+    }
+
+    .login-section {
+        min-height: auto;
+        padding: 110px 20px 55px;
+    }
+}
+
+/* Mobile: 576px–767px */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    html {
+        scroll-padding-top: 75px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .navbar-collapse {
+        max-height: calc(100vh - 75px);
+        overflow-y: auto;
+    }
+
+    .nav-tabs-custom {
+        align-items: stretch;
+        gap: 4px;
+        padding-top: 12px;
+    }
+
+    .nav-tabs-custom .nav-link {
+        padding: 11px 14px;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding: 115px 0 65px;
+    }
+
+    .hero-section h1 {
+        font-size: clamp(2.5rem, 7vw, 3.4rem);
+        line-height: 1.05;
+    }
+
+    .hero-text {
+        font-size: 1rem;
+    }
+
+    .phone-preview {
+        width: min(270px, 100%);
+        min-height: 490px;
+    }
+
+    .section-light,
+    .section-dark,
+    .example-section,
+    .situations-section,
+    .signup-section {
+        padding: 65px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .section-heading h2,
+    .example-section h2 {
+        font-size: clamp(1.9rem, 5.5vw, 2.6rem);
+    }
+
+    .dashboard-card,
+    .culture-card,
+    .feature-card {
+        padding: 20px;
+    }
+
+    .lesson-content {
+        padding: 20px;
+    }
+
+    .translation-row {
+        padding: 20px;
+    }
+
+    .dictionary-box {
+        padding: 22px;
+    }
+
+    .upload-card {
+        padding: 28px 22px;
+    }
+
+    .audience-card {
+        padding: 25px;
+    }
+
+    .login-section {
+        min-height: auto;
+        padding: 105px 16px 45px;
+    }
+
+    .login-box {
+        padding: 32px 24px;
+    }
+
+    .footer-bottom {
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* Small mobile: 575px and below */
+@media (max-width: 575.98px) {
+    html {
+        scroll-padding-top: 70px;
+    }
+
+    body {
+        font-size: 0.95rem;
+    }
+
+    .container,
+    .container-fluid {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .navbar {
+        padding: 8px 0;
+    }
+
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+
+    .brand-logo {
+        width: 36px;
+        height: 36px;
+    }
+
+    .navbar-collapse {
+        max-height: calc(100vh - 65px);
+        overflow-y: auto;
+    }
+
+    .nav-tabs-custom {
+        align-items: stretch;
+        gap: 4px;
+        padding-top: 10px;
+    }
+
+    .nav-tabs-custom .nav-link {
+        display: block;
+        width: 100%;
+        padding: 11px 12px;
+        font-size: 0.9rem;
+    }
+
+    .nav-tabs-custom .nav-link::after {
+        left: 12px;
+        right: auto;
+        width: 32px;
+    }
+
+    .hero-section {
+        min-height: auto;
+        padding: 105px 0 55px;
+    }
+
+    .hero-section h1 {
+        font-size: clamp(2.15rem, 10vw, 2.8rem);
+        line-height: 1.08;
+        overflow-wrap: anywhere;
+    }
+
+    .hero-text {
+        font-size: 0.98rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        min-height: 44px;
+    }
+
+    .phone-preview {
+        width: min(245px, 100%);
+        min-height: 460px;
+        border-width: 6px;
+        border-radius: 30px;
+    }
+
+    .phone-content {
+        min-height: 350px;
+        padding: 15px;
+    }
+
+    .sign-icon img {
+        width: 95px;
+        height: 95px;
+    }
+
+    .section-light,
+    .section-dark,
+    .example-section,
+    .situations-section,
+    .signup-section {
+        padding: 55px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 30px;
+    }
+
+    .section-heading h2,
+    .example-section h2 {
+        font-size: clamp(1.7rem, 7vw, 2.2rem);
+    }
+
+    .section-heading p {
+        font-size: 0.95rem;
+    }
+
+    .dashboard-card,
+    .culture-card,
+    .feature-card {
+        padding: 18px;
+    }
+
+    .lesson-content {
+        padding: 18px;
+    }
+
+    .lesson-image {
+        min-height: 130px;
+        font-size: 3.5rem;
+    }
+
+    .translation-row {
+        padding: 18px;
+        gap: 6px;
+    }
+
+    .dictionary-box {
+        padding: 18px;
+        border-radius: 15px;
+    }
+
+    .dictionary-result {
+        padding: 20px 14px;
+    }
+
+    .caption-process {
+        gap: 12px;
+    }
+
+    .caption-process > div {
+        min-width: 75px;
+    }
+
+    .upload-card {
+        padding: 24px 18px;
+    }
+
+    .audience-card {
+        padding: 22px;
+    }
+
+    .audience-card h2 {
+        font-size: 1.8rem;
+    }
+
+    .search-question {
+        flex-direction: column;
+    }
+
+    .search-question input,
+    .search-question button {
+        width: 100%;
+        min-height: 44px;
+    }
+
+    .faq-buttons {
+        align-items: stretch;
+    }
+
+    .faq-buttons button {
+        max-width: 100%;
+        padding: 10px 14px;
+    }
+
+    .login-section {
+        min-height: auto;
+        padding: 100px 14px 40px;
+    }
+
+    .login-box {
+        padding: 26px 18px;
+        border-radius: 18px;
+    }
+
+    .login-logo img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .login-box h2 {
+        font-size: 1.75rem;
+    }
+
+    .login-options {
+        align-items: flex-start;
+        font-size: 0.85rem;
+    }
+
+    .login-button {
+        min-height: 46px;
+    }
+
+    .video-modal .modal-dialog {
+        margin: 10px;
+    }
+
+    .video-modal .modal-body {
+        padding: 12px;
+    }
+
+    .video-modal .modal-header {
+        padding: 14px;
+    }
+
+    .footer-logo {
+        font-size: 1.3rem;
+    }
+
+    .footer-logo-image {
+        width: 36px;
+        height: 36px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+}
+
+/* Accessibility: honor reduced-motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
